@@ -18,6 +18,6 @@ public function index()
     $this->load->view('templates/sidebar');
     $this->load->view('templates/topbar');
     $this->load->view('dashboard/index', $data);
-    $this->load->view('templates/sidebar');
+    $this->load->view('templates/topbar');
 }
 }
