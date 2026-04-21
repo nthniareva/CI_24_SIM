@@ -14,7 +14,7 @@
 
 <!-- Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="<?= site_url('dashboard') ?>">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span>
     </a>
@@ -26,7 +26,7 @@
 <li class="nav-item">
     <a class="nav-link" href="<?= site_url('kategori') ?>">
         <i class="fas fa-box"></i>
-        <span>kategori</span>
+        <span>Kategori</span>
     </a>
 </li>
 
