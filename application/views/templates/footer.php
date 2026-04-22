@@ -11,9 +11,9 @@
 <script>
     $(document).ready(function() {
         $('#dataTable').DataTable({
-            "languange": {
+            "language": {
                 "search": "Cari :",
-                "lnghtMenu": "Tampilkan _Menu_ data",
+                "lengthMenu": "Tampilkan _Menu_ data",
                 "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
                 "paginate":{
                     "previous": "Sebelumnya",
@@ -28,14 +28,16 @@
     var chart=new Chart(ctx, {
         type: 'bar',
         data:{
-            labels:['Anggota'],
+            labels:['Buku','Anggota', 'Peminjaman'],
             datasets: [{
-                labels:'Jumlah Data',
+                label:'Jumlah Data',
                 data:[
-                    <? = $total_anggota; ?>        
+                    <?= $total_buku; ?>,
+                    <?= $total_anggota; ?>, 
+                    <?= $total_peminjaman; ?>       
                 ],
                 backgroundColor:[
-                    '#4e73df'
+                    '#4e73df',
                     '#1cc88a',
                     '#f6c23e'
                 ]
