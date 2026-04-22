@@ -25,9 +25,29 @@
                     <?= form_error('penerbit', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
+                    <label>Tahun</label>
+                    <input type="number" name="tahun" class="form-control" min="1900" max="2026" required>
+                    <?= form_error('tahun', '<small class="text-danger">', '</small>') ?>
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select name="kategori" class="form-control" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <?php foreach($kategori as $k): ?>
+                            <option value="<?= $k->nama_kategori ?>"><?= $k->nama_kategori ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <?= form_error('kategori', '<small class="text-danger">', '</small>') ?>
+                </div>
+                <div class="form-group">
                     <label>Stok</label>
                     <input type="number" name="stok" class="form-control" required>
                     <?= form_error('stok', '<small class="text-danger">', '</small>') ?>
+                </div>
+                <div class="form-group">
+                    <label>Lokasi Rak</label>
+                    <input type="text" name="lokasi_rak" class="form-control" required>
+                    <?= form_error('lokasi_rak', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 <a href="<?= base_url('buku') ?>" class="btn btn-secondary">Kembali</a>

@@ -21,9 +21,8 @@
                             <th>Kode Buku</th>
                             <th>Judul Buku</th>
                             <th>Penulis</th>
-                            <th>Penerbit</th>
+                            <th>Kategori</th>
                             <th>Stok</th>
-                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -34,9 +33,8 @@
                             <td><?= $b->kode_buku ?></td>
                             <td><?= $b->judul_buku ?></td>
                             <td><?= $b->penulis ?></td>
-                            <td><?= $b->penerbit ?></td>
+                            <td><?= $b->kategori ?></td>
                             <td><?= $b->stok ?></td>
-                            <td><?= $b->status ?></td>
                             <td>
                                 <a href="<?= base_url('buku/edit/'.$b->id_buku) ?>" class="btn btn-warning btn-sm">Edit</a>
                                 <a href="<?= base_url('buku/hapus/'.$b->id_buku) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
